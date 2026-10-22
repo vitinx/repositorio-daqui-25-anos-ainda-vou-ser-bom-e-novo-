@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Neymar Jr., sua trajetória e seus melhores momentos.">
-  <title>Neymar Jr. — Site de Fã</title>
+  <meta name="description" content="Conheça a história de Neymar Jr., suas chuteiras e seus melhores dribles.">
+  <title>Neymar Jr. — História e Skills</title>
 
   <style>
     :root {
-      --green: #76ad00;
-      --background: #f5f7f5;
-      --panel: #ffffff;
-      --text: #151b19;
-      --muted: #46514b;
-      --line: #d7ded9;
+      --green: #b9ff39;
+      --dark: #080b0b;
+      --panel: #151b19;
+      --muted: #d0d8d3;
+      --line: #35413b;
+      --white: #ffffff;
     }
 
     * {
@@ -23,15 +23,16 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 80;
+      scroll-padding-top: 80px;
     }
 
     body {
       margin: 0;
-      background: (background);
-      color: (text);
+      background: (dark);
+      color: (white);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.65;
+      overflow-x: hidden;
     }
 
     a {
@@ -45,14 +46,14 @@
 
     .wrap {
       width: (1120, 92);
-      margin: auto;
+      margin-inline: auto;
     }
 
     .topbar {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: (255, 255, 255, .97);
+      background: (8, 11, 11, .96);
       border-bottom: 1 solid (line);
     }
 
@@ -60,19 +61,17 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20;
+      gap: 20';
       padding: 16 0;
     }
 
     .brand {
       font-weight: 900;
       font-size: 1.15;
+      white-space: nowrap;
     }
 
-    .brand span,
-    .eyebrow,
-    .year,
-    .tag {
+    .brand span {
       color: (green);
     }
 
@@ -84,7 +83,7 @@
 
     .links a {
       font-size: .88;
-      color: #303a33;
+      color: #f0f3f0;
     }
 
     .links a:hover {
@@ -101,6 +100,7 @@
     }
 
     .eyebrow {
+      color: (--green);
       font-size: .78;
       letter-spacing: 2;
       text-transform: uppercase;
@@ -112,16 +112,18 @@
       line-height: .92;
       letter-spacing: -.07;
       margin: 18 0 24;
+      color: (white);
     }
 
     .hero h1 em {
       font-style: normal;
-      color: (--green);
+      color: (green);
     }
 
-    .hero p,
-    .section-head p {
-      color: (--muted);
+    .hero p {
+      max-width: 510;
+      color: (muted);
+      font-size: 1.05;
     }
 
     .actions {
@@ -132,7 +134,9 @@
     }
 
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 12 18;
       border-radius: 5;
       font-weight: 800;
@@ -146,16 +150,17 @@
     }
 
     .btn.secondary {
-      color: (text);
-      border-color: #aab5ad;
+      color: (white);
+      border-color: #758078;
     }
 
     .hero-art {
       height: 460;
+      min-width: 0;
       position: relative;
       overflow: hidden;
       border-radius: 12;
-      background: #e3e9e4;
+      background: #18231c;
     }
 
     .hero-art img {
@@ -163,16 +168,18 @@
       height: 100;
       object-fit: cover;
       object-position: center 20;
+      opacity: .92;
       display: block;
     }
 
-    .hero-art::after {
-      content: "NEYMAR JR";
+    .hero-art:after {
+      content: 'NEYMAR JR';
       position: absolute;
       bottom: 12;
       left: 14;
       font-size: (2, 5, 4.5);
       font-weight: 900;
+      letter-spacing: -.08;
       color: (255, 255, 255, .85);
       text-shadow: 0 2 12 #000;
     }
@@ -184,12 +191,21 @@
       font-size: 4;
       font-weight: 900;
       color: (green);
+      line-height: 1;
       text-shadow: 0 2 12 #000;
     }
 
     .section {
       padding: 76 0;
       border-top: 1 solid (line);
+    }
+
+    .section h2 {
+      font-size: (2, 5, 3.6);
+      line-height: 1.08;
+      margin: 8 0;
+      letter-spacing: -.05;
+      color: (white);
     }
 
     .section-head {
@@ -200,38 +216,29 @@
       margin-bottom: 30;
     }
 
-    .section h2 {
-      font-size: (2, 5, 3.6);
-      line-height: 1.08;
-      margin: 8 0;
-      letter-spacing: -.05;
-    }
-
     .section-head p {
+      color: (muted);
       max-width: 430;
       margin: 0;
     }
 
-    .copa-panel,
-    .time-card,
-    .boot-card,
-    .photo-card,
-    .video-box {
+    .copa-panel {
       background: (panel);
       border: 1 solid (line);
       border-radius: 10;
+      padding: 26;
     }
 
-    .copa-panel {
-      padding: 26;
+    .copa-panel h3 {
+      color: (white);
+      margin-top: 0;
     }
 
     .copa-panel p {
       color: (muted);
     }
 
-    .copa-panel a:not(.btn),
-    .sources a {
+    .copa-panel a:not(.btn) {
       color: (green);
       text-decoration: underline;
     }
@@ -249,19 +256,31 @@
       gap: 12;
     }
 
+    .time-card,
+    .boot-card,
+    .photo-card {
+      background: (panel);
+      border: 1 solid (line);
+      border-radius: 8;
+      overflow: hidden;
+    }
+
     .time-card {
       padding: 22 18;
-      min-height: 21;
+      min-width: 0;
+      min-height: 210;
     }
 
     .year {
       font-size: 1.6;
       font-weight: 900;
+      color: (green);
     }
 
     .time-card h3,
     .boot-card h3 {
-      margin: 10 0 6'''''''''''''''                                                                                                  '''''''''''''''''''';
+      margin: 10 0 6;
+      color: (white);
     }
 
     .time-card p,
@@ -310,13 +329,16 @@
       width: 100;
       height: 190;
       object-fit: cover;
+      object-position: center;
       border-radius: 5;
+      background: #202824;
       display: block;
     }
 
-    .tag {
+    .boot-card .tag {
       display: inline-block;
       font-size: .7;
+      color: (green);
       letter-spacing: 1.5;
       font-weight: 800;
       margin-top: 14;
@@ -332,7 +354,9 @@
     .photo-card {
       position: relative;
       display: block;
-      overflow: hidden;
+      min-width: 0;
+      min-height: 0;
+      height: 100;
     }
 
     .photo-card:first-child {
@@ -342,9 +366,10 @@
     .photo-card img {
       width: 100;
       height: 100;
+      min-height: 0;
       object-fit: cover;
       display: block;
-      transition: transform .35s;
+      transition: transform .35;
     }
 
     .photo-card:hover img {
@@ -353,13 +378,14 @@
 
     .photo-card span {
       position: absolute;
+      z-index: 2;
       bottom: 0;
       left: 0;
       right: 0;
       padding: 34 14 12;
       background: (transparent, (0, 0, 0, .9));
       font-weight: 800;
-      color: white;
+      color: #fff;
     }
 
     .video-box {
@@ -367,19 +393,23 @@
       grid-template-columns: 1.15 .85;
       gap: 28;
       align-items: center;
+      background: (panel);
       padding: 22;
+      border: 1 solid (line);
+      border-radius: 10;
     }
 
     .video-placeholder {
       aspect-ratio: 16 / 9;
-      background: (135, #f0f5ec, #dce5dc);
-      border: 1 solid (line);
+      min-width: 0;
+      background: (135, #28382c, #101514);
       border-radius: 7;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 20;
+      color: #fff;
     }
 
     .play {
@@ -390,18 +420,37 @@
       align-items: center;
       justify-content: center;
       background: (green);
+      color: #101510;
       font-size: 1.6;
       margin-bottom: 14;
     }
 
-    .video-copy p,
-    .video-copy ul,
-    .sources {
+    .video-placeholder p {
+      margin: 0;
+      color: #fff;
+    }
+
+    .video-copy h3 {
+      color: #fff;
+    }
+
+    .video-copy p {
       color: (muted);
     }
 
+    .video-copy ul {
+      padding-left: 20;
+      color: #e5ebe7;
+    }
+
     .sources {
+      color: (muted);
       font-size: .85;
+    }
+
+    .sources a {
+      color: (green);
+      text-decoration: underline;
     }
 
     footer {
@@ -415,6 +464,7 @@
       .hero {
         grid-template-columns: 1;
         min-height: 0;
+        padding-top: 46;
       }
 
       .hero-art {
@@ -438,6 +488,10 @@
         grid-template-rows: 220 180 180;
       }
 
+      .photo-card:first-child {
+        grid-row: span 2;
+      }
+
       .section-head {
         display: block;
       }
@@ -447,7 +501,7 @@
       }
     }
 
-    (max-width: 560) {
+     (max-width: 560) {
       nav {
         align-items: flex-start;
         flex-direction: column;
@@ -456,6 +510,10 @@
 
       .links {
         gap: 10 16;
+      }
+
+      .links a {
+        font-size: .8;
       }
 
       .hero-art {
@@ -469,6 +527,7 @@
       }
 
       .gallery {
+        grid-template-columns: (2, (0, 1));
         grid-template-rows: 190 145 145;
         gap: 8;
       }
@@ -481,252 +540,328 @@
       .section {
         padding: 54 0;
       }
+
+      .section-head {
+        margin-bottom: 22;
+      }
+
+      .copa-panel {
+        padding: 18;
+      }
+
+      .video-box {
+        padding: 14;
+        gap: 18;
+      }
+
+      .boot-card img {
+        height: 180;
+      }
     }
   </style>
 </head>
 
 <body>
-<header class="topbar">
-  <nav class="wrap">
-    <a class="brand" href="#inicio">NEYMAR<span>.</span>JR</a>
-    <div class="links">
-      <a href="#copa">Copa 2026</a>
-      <a href="#historia">História</a>
-      <a href="#chuteiras">Chuteiras</a>
-      <a href="#galeria">Fotos</a>
-      <a href="#skills">Skills</a>
-    </div>
-  </nav>
-</header>
+  <header class="topbar">
+    <nav class="wrap">
+      <a class="brand" href="#inicio">NEYMAR<span>.</span>JR</a>
 
-<main>
-  <section class="hero wrap" id="inicio">
-    <div>
-      <div class="eyebrow">O sonho do hexa • Copa 2026</div>
-      <h1>NEYMAR<br><em>JR.</em></h1>
-      <p>
-        Uma carreira de talento, dribles e momentos inesquecíveis.
-        Relembre a trajetória de Neymar e acompanhe a Seleção Brasileira.
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="#copa">NEYMAR NA COPA ↓</a>
-        <a class="btn secondary" href="#historia">VER TRAJETÓRIA</a>
+      <div class="links">
+        <a href="#copa">Copa 2026</a>
+        <a href="#historia">História</a>
+        <a href="#chuteiras">Chuteiras</a>
+        <a href="#galeria">Fotos</a>
+        <a href="#skills">Skills</a>
       </div>
-    </div>
+    </nav>
+  </header>
 
-    <div class="hero-art">
-      <img
-        src="https://commons.wikimedia.org/wiki/Special:FilePath/Neymar%20Jr%20-%20Barcelona%20vs%20Real%20Madrid%202015.jpg"
-        alt="Neymar em campo pelo Barcelona"
-        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1000&q=85'">
-      <div class="number">10</div>
-    </div>
-  </section>
+  <main>
+    <section class="hero wrap" id="inicio">
+      <div>
+        <div class="eyebrow">O sonho do hexa • Copa 2026</div>
+        <h1>NEYMAR<br><em>JR.</em></h1>
 
-  <section class="section" id="copa">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Especial / Copa do Mundo</div>
-          <h2>Neymar e a Copa 2026.</h2>
-        </div>
-        <p>Um espaço para acompanhar o sonho de ver o camisa 10 em mais um Mundial.</p>
-      </div>
-
-      <div class="copa-panel">
-        <h3>Uma possível última dança?</h3>
         <p>
-          A participação de Neymar em um Mundial depende de convocação oficial,
-          condição física e decisões da comissão técnica.
+          Uma carreira de talento, dribles e momentos inesquecíveis.
+          Relembre a trajetória de Neymar e acompanhe o contexto da
+          Seleção Brasileira rumo à Copa do Mundo de 2026.
         </p>
-        <p>Confira informações atualizadas nos sites oficiais:</p>
-        <div class="copa-links">
-          <a class="btn primary" href="https://www.cbf.com.br/" target="_blank" rel="noreferrer">NOTÍCIAS DA CBF ↗</a>
-          <a class="btn secondary" href="https://www.fifa.com/" target="_blank" rel="noreferrer">SITE DA FIFA ↗</a>
+
+        <div class="actions">
+          <a class="btn primary" href="#copa">NEYMAR NA COPA ↓</a>
+          <a class="btn secondary" href="#historia">VER TRAJETÓRIA</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section" id="historia">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">01 / trajetória</div>
-          <h2>Uma história de talento.</h2>
-        </div>
-        <p>De Mogi das Cruzes ao futebol internacional, Neymar construiu uma carreira marcante.</p>
+      <div class="hero-art">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Neymar%20Jr%20-%20Barcelona%20vs%20Real%20Madrid%202015.jpg"
+          alt="Neymar em campo pelo Barcelona"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1000&q=85'">
+        <div class="number">10</div>
       </div>
+    </section>
 
-      <div class="timeline">
-        <article class="time-card">
-          <div class="year">1992</div>
-          <h3>O começo</h3>
-          <p>Nascido em 5 de fevereiro, em Mogi das Cruzes, São Paulo.</p>
-        </article>
-
-        <article class="time-card">
-          <div class="year">2009</div>
-          <h3>Menino da Vila</h3>
-          <p>Estreia profissional pelo Santos ainda adolescente.</p>
-        </article>
-
-        <article class="time-card">
-          <div class="year">2013</div>
-          <h3>Barcelona</h3>
-          <p>Chega à Europa e conquista a Champions League em 2015.</p>
-        </article>
-
-        <article class="time-card">
-          <div class="year">2017</div>
-          <h3>Paris Saint-Germain</h3>
-          <p>Inicia uma nova etapa no futebol francês.</p>
-        </article>
-
-        <article class="time-card">
-          <div class="year">2023+</div>
-          <h3>Novos capítulos</h3>
-          <p>Passa pelo Al-Hilal e retorna ao Santos em 2025.</p>
-        </article>
-      </div>
-
-      <div class="stats">
-        <div class="stat">
-          <strong>2011</strong>
-          <span>Campeão da Libertadores com o Santos</span>
-        </div>
-        <div class="stat">
-          <strong>2015</strong>
-          <span>Campeão da Champions League com o Barcelona</span>
-        </div>
-        <div class="stat">
-          <strong>2016</strong>
-          <span>Medalha de ouro olímpica com o Brasil</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="chuteiras">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">02 / equipamentos</div>
-          <h2>Chuteiras de craque.</h2>
-        </div>
-        <p>Modelos e marcas que acompanharam diferentes fases da carreira.</p>
-      </div>
-
-      <div class="boots">
-        <article class="boot-card">
-          <img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=900&q=85" alt="Chuteira de futebol em campo">
-          <span class="tag">FASE SANTOS</span>
-          <h3>Nike Mercurial</h3>
-          <p>Linha conhecida pelo visual marcante e foco em velocidade.</p>
-        </article>
-
-        <article class="boot-card">
-          <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=85" alt="Equipamento de futebol">
-          <span class="tag">BARCELONA / PSG</span>
-          <h3>Nike Hypervenom</h3>
-          <p>Modelo associado a jogadores ofensivos e habilidosos.</p>
-        </article>
-
-        <article class="boot-card">
-          <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=900&q=85" alt="Bola e chuteiras no gramado">
-          <span class="tag">FASE PUMA</span>
-          <h3>Puma Future</h3>
-          <p>Modelos usados durante sua parceria com a Puma.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="galeria">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">03 / momentos</div>
-          <h2>Dentro e fora de campo.</h2>
-        </div>
-        <p>Uma galeria para celebrar o futebol, a torcida e os momentos de jogo.</p>
-      </div>
-
-      <div class="gallery">
-        <a class="photo-card" href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">
-          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Neymar%20Jr%20-%20Barcelona%20vs%20Real%20Madrid%202015.jpg" alt="Neymar em ação">
-          <span>O talento em campo</span>
-        </a>
-
-        <a class="photo-card" href="https://images.unsplash.com/photo-1522778119026-d647f0596c20" target="_blank" rel="noreferrer">
-          <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=900&q=85" alt="Estádio de futebol">
-          <span>A paixão da torcida</span>
-        </a>
-
-        <a class="photo-card" href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">
-          <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=85" alt="Jogador com bola">
-          <span>Controle de bola</span>
-        </a>
-
-        <a class="photo-card" href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">
-          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=900&q=85" alt="Partida de futebol">
-          <span>O jogo bonito</span>
-        </a>
-
-        <a class="photo-card" href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">
-          <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=900&q=85" alt="Bola no gramado">
-          <span>Amor pelo futebol</span>
-        </a>
-      </div>
-
-      <p class="sources">
-        Algumas imagens são ilustrativas.
-        <a href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">Ver fotos de Neymar</a>.
-      </p>
-    </div>
-  </section>
-
-  <section class="section" id="skills">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">04 / highlights</div>
-          <h2>O show dos dribles.</h2>
-        </div>
-        <p>Pedaladas, canetas e criatividade que marcaram o estilo de Neymar.</p>
-      </div>
-
-      <div class="video-box">
-        <a class="video-placeholder" href="https://www.youtube.com/results?search_query=Neymar+Jr+skills+and+dribbles+highlights" target="_blank" rel="noreferrer">
+    <section class="section" id="copa">
+      <div class="wrap">
+        <div class="section-head">
           <div>
-            <span class="play">▶</span>
-            <p><strong>ASSISTIR VÍDEOS DE SKILLS</strong><br>Abra os melhores lances no YouTube</p>
+            <div class="eyebrow">Especial / Copa do Mundo</div>
+            <h2>Neymar e a Copa 2026.</h2>
           </div>
-        </a>
+          <p>
+            Uma página especial sobre o sonho de ver o camisa 10 em mais
+            um Mundial — com informação clara e sem confundir expectativa
+            com confirmação oficial.
+          </p>
+        </div>
 
-        <div class="video-copy">
-          <div class="eyebrow">PLAYMAKER MODE</div>
-          <h3>Mais do que velocidade.</h3>
-          <p>O estilo de Neymar combina improviso, controle de bola e jogadas inesperadas.</p>
-          <ul>
-            <li>Dribles em espaço curto</li>
-            <li>Canetas e pedaladas</li>
-            <li>Arranques e mudanças de direção</li>
-            <li>Assistências e finalizações criativas</li>
-          </ul>
-          <a class="btn primary" href="https://www.youtube.com/results?search_query=Neymar+Jr+skills+and+dribbles+highlights" target="_blank" rel="noreferrer">VER COMPILAÇÕES ↗</a>
+        <div class="copa-panel">
+          <h3>Uma possível última dança?</h3>
+          <p>
+            Neymar já falou publicamente sobre a possibilidade de a Copa
+            de 2026 ser seu último Mundial. Porém, a participação depende
+            de convocação oficial, condição física e decisões da comissão
+            técnica. Não trate rumores ou previsões como fatos confirmados.
+          </p>
+          <p>
+            Confira informações atualizadas nos sites da
+            <a href="https://www.cbf.com.br/" target="_blank" rel="noreferrer">CBF</a>
+            e da
+            <a href="https://www.fifa.com/" target="_blank" rel="noreferrer">FIFA</a>.
+          </p>
+
+          <div class="copa-links">
+            <a class="btn primary" href="https://www.cbf.com.br/" target="_blank" rel="noreferrer">NOTÍCIAS DA CBF ↗</a>
+            <a class="btn secondary" href="https://www.fifa.com/" target="_blank" rel="noreferrer">SITE DA FIFA ↗</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer>
-  <div class="wrap">
-    Projeto de fã, sem vínculo oficial com Neymar Jr., clubes ou patrocinadores.
-    Feito para estudo de HTML e CSS.
-  </div>
-</footer>
+    <section class="section" id="historia">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">01 / trajetória</div>
+            <h2>Uma história de talento.</h2>
+          </div>
+          <p>
+            De Mogi das Cruzes ao futebol internacional, Neymar construiu
+            uma carreira marcada por habilidade, personalidade e grandes momentos.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="time-card">
+            <div class="year">1992</div>
+            <h3>O começo</h3>
+            <p>Nascido em 5 de fevereiro, em Mogi das Cruzes, São Paulo. Desde pequeno, o futebol fazia parte da sua vida.</p>
+          </article>
+
+          <article class="time-card">
+            <div class="year">2009</div>
+            <h3>Menino da Vila</h3>
+            <p>Estreia profissional pelo Santos ainda adolescente e rapidamente vira um dos nomes mais comentados do Brasil.</p>
+          </article>
+
+          <article class="time-card">
+            <div class="year">2013</div>
+            <h3>Barcelona</h3>
+            <p>Chega à Europa e forma um trio histórico com Lionel Messi e Luis Suárez, conquistando a Champions League em 2015.</p>
+          </article>
+
+          <article class="time-card">
+            <div class="year">2017</div>
+            <h3>Paris Saint-Germain</h3>
+            <p>Inicia uma nova etapa na França, com grandes atuações e protagonismo no futebol europeu.</p>
+          </article>
+
+          <article class="time-card">
+            <div class="year">2023+</div>
+            <h3>Novos capítulos</h3>
+            <p>Passa pelo Al-Hilal, na Arábia Saudita, e retorna ao Santos em 2025, clube onde tudo começou no profissional.</p>
+          </article>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>2011</strong>
+            <span>Campeão da Libertadores com o Santos</span>
+          </div>
+          <div class="stat">
+            <strong>2015</strong>
+            <span>Campeão da Champions League com o Barcelona</span>
+          </div>
+          <div class="stat">
+            <strong>2016</strong>
+            <span>Medalha de ouro olímpica com o Brasil</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chuteiras">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">02 / equipamentos</div>
+            <h2>Chuteiras de craque.</h2>
+          </div>
+          <p>
+            Ao longo da carreira, os modelos e as marcas acompanharam
+            diferentes fases do jogador.
+          </p>
+        </div>
+
+        <div class="boots">
+          <article class="boot-card">
+            <img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=900&q=85"
+                 alt="Chuteira de futebol em campo" loading="lazy">
+            <span class="tag">FASE SANTOS</span>
+            <h3>Nike Mercurial</h3>
+            <p>Na fase inicial da carreira, Neymar ficou associado à linha Mercurial, conhecida pelo visual marcante e foco em velocidade.</p>
+          </article>
+
+          <article class="boot-card">
+            <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=85"
+                 alt="Equipamento de futebol" loading="lazy">
+            <span class="tag">BARCELONA / PSG</span>
+            <h3>Nike Hypervenom</h3>
+            <p>Também foi um dos rostos da linha Hypervenom, desenvolvida para jogadores ofensivos e habilidosos.</p>
+          </article>
+
+          <article class="boot-card">
+            <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=900&q=85"
+                 alt="Bola e chuteiras no gramado" loading="lazy">
+            <span class="tag">FASE PUMA</span>
+            <h3>Puma Future</h3>
+            <p>Depois de encerrar sua parceria com a Nike, passou a usar modelos da Puma, incluindo linhas Future e edições especiais.</p>
+          </article>
+        </div>
+
+        <p class="sources">
+          Modelos e fases resumidos a partir de reportagens sobre os equipamentos usados por Neymar.
+          Os modelos variaram por temporada.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">03 / momentos</div>
+            <h2>Dentro e fora de campo.</h2>
+          </div>
+          <p>Uma galeria visual para celebrar o futebol, a torcida e os momentos de jogo.</p>
+        </div>
+
+        <div class="gallery">
+          <a class="photo-card" href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Neymar%20Jr%20-%20Barcelona%20vs%20Real%20Madrid%202015.jpg"
+                 alt="Neymar em ação" loading="lazy">
+            <span>O talento em campo</span>
+          </a>
+
+          <a class="photo-card" href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">
+            <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=900&q=85"
+                 alt="Estádio de futebol lotado" loading="lazy">
+            <span>A paixão da torcida</span>
+          </a>
+
+          <a class="photo-card" href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">
+            <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=85"
+                 alt="Jogador com bola" loading="lazy">
+            <span>Controle de bola</span>
+          </a>
+
+          <a class="photo-card" href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=900&q=85"
+                 alt="Partida de futebol" loading="lazy">
+            <span>O jogo bonito</span>
+          </a>
+
+          <a class="photo-card" href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">
+            <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=900&q=85"
+                 alt="Bola no gramado" loading="lazy">
+            <span>Amor pelo futebol</span>
+          </a>
+        </div>
+
+        <p class="sources">
+          Algumas imagens são ilustrativas. Para fotos reais de Neymar com licença adequada,
+          consulte a
+          <a href="https://commons.wikimedia.org/wiki/Category:Neymar" target="_blank" rel="noreferrer">galeria do Wikimedia Commons</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">04 / highlights</div>
+            <h2>O show dos dribles.</h2>
+          </div>
+          <p>
+            Pedaladas, mudanças rápidas de direção, canetas e criatividade:
+            recursos que fizeram dos skills uma marca registrada de Neymar.
+          </p>
+        </div>
+
+        <div class="video-box">
+          <a class="video-placeholder"
+             href="https://www.youtube.com/results?search_query=Neymar+Jr+skills+and+dribbles+highlights"
+             target="_blank" rel="noreferrer">
+            <div>
+              <span class="play">▶</span>
+              <p><strong>ASSISTIR VÍDEOS DE SKILLS</strong><br>Abra os melhores lances no YouTube</p>
+            </div>
+          </a>
+
+          <div class="video-copy">
+            <div class="eyebrow">PLAYMAKER MODE</div>
+            <h3>Mais do que velocidade.</h3>
+            <p>O estilo de Neymar combina improviso, controle próximo da bola e coragem para tentar jogadas inesperadas.</p>
+            <ul>
+              <li>Dribles em espaço curto</li>
+              <li>Canetas e pedaladas</li>
+              <li>Arranques e mudanças de direção</li>
+              <li>Assistências e finalizações criativas</li>
+            </ul>
+            <a class="btn primary"
+               href="https://www.youtube.com/results?search_query=Neymar+Jr+skills+and+dribbles+highlights"
+               target="_blank" rel="noreferrer">VER COMPILAÇÕES ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">PARA SABER MAIS</div>
+        <h2>Uma carreira em constante movimento.</h2>
+        <p class="sources">
+          Conteúdo biográfico consultado em fontes públicas:
+          <a href="https://www.cob.org.br/" target="_blank" rel="noreferrer">Comitê Olímpico do Brasil</a>,
+          <a href="https://www.cbf.com.br/" target="_blank" rel="noreferrer">CBF</a> e
+          <a href="https://www.uol.com.br/" target="_blank" rel="noreferrer">UOL</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Projeto de fã, sem vínculo oficial com Neymar Jr., clubes ou patrocinadores.
+      Feito para estudo de HTML e CSS.
+    </div>
+  </footer>
+</body>
+</html>
+
 
 </body>
 </html>
