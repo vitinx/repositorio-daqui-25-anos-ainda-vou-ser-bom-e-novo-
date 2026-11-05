@@ -1,6 +1,341 @@
-body{
-    background-color: rgba(4, 0, 0, 0.965);
+
+ url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-h1{
-    color: rgb(14, 151, 149);
+
+body {
+    background: #080d12;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* MENU */
+
+header {
+    background: #080d12;
+    padding: 20 7;
+    position: fixed;
+    width: 100;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1 solid #26332d;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 27;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.logo span, footer span {
+    color: #f5d000;
+}
+
+.menu {
+    display: flex;
+    gap: 25;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 13;
+    font-weight: 700;
+    transition: .3;
+}
+
+.menu a:hover {
+    color: #f5d000;
+}
+
+/* INÍCIO */
+
+.hero {
+    min-height: 100;
+    display: flex;
+    align-items: center;
+    padding: 120 10 60;
+    background:
+    (90, #080d12 15, (8,13,18,.8) 55, (8,13,18,.2)),
+    url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=1600')
+    center/cover;
+}
+
+.hero-content {
+    max-width: 650;
+}
+
+.subtitulo {
+    color: #f5d000;
+    font-weight: 800;
+    letter-spacing: 4;
+    margin-bottom: 15;
+}
+
+.hero h1 {
+    font-size: (65, 10, 120);
+    line-height: .9;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: #f5d000;
+}
+
+.hero-content > p:not(.subtitulo) {
+    margin: 25 0;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.botao {
+    display: inline-block;
+    background: #f5d000;
+    color: #080d12;
+    padding: 16 25;
+    font-weight: 900;
+    text-decoration: none;
+    transition: .3;
+}
+
+.botao:hover {
+    background: #16a34a;
+    color: white;
+    transform: (-4);
+}
+
+/* SEÇÕES */
+
+.secao {
+    padding: 110 9;
+    scroll-margin-top: 75;
+}
+
+.secao h2 {
+    font-size: 38;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 45;
+}
+
+.secao h2 span {
+    color: #f5d000;
+}
+
+.descricao {
+    text-align: center;
+    color: #aaa;
+    margin-top: -25;
+    margin-bottom: 40;
+    line-height: 1.7;
+}
+
+/* HISTÓRIA */
+
+.historia {
+    display: grid;
+    grid-template-columns: 1 1;
+    gap: 45;
+    align-items: center;
+}
+
+.historia img {
+    width: 100;
+    border-radius: 12;
+    height: 380;
+    object-fit: cover;
+}
+
+.historia h3 {
+    color: #f5d000;
+    font-size: 25;
+    margin-bottom: 20;
+}
+
+.historia p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 15;
+}
+
+/* CHUTEIRAS */
+
+.chuteiras {
+    background: #101a19;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: (3, 7);
+    gap: 25;
+}
+
+.card {
+    background: #17221f;
+    border-radius: 12;
+    overflow: hidden;
+    transition: .3;
+    border: 1 solid #263a32;
+}
+
+.card:hover {
+    transform: (-10);
+    border-color: #f5d000;
+}
+
+.card img {
+    width: 100;
+    height: 230;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20 20 10;
+    color: #f5d000;
+}
+
+.card p {
+    padding: 0 20 25;
+    color: #bbb;
+    line-height: 1.6;
+    font-size: 14;
+}
+
+/* PRÊMIOS */
+
+.conquistas {
+    display: grid;
+    grid-template-columns: (3, 1);
+    gap: 20;
+}
+
+.conquista {
+    background: #131d20;
+    padding: 35 20;
+    text-align: center;
+    border-radius: 10;
+    border-bottom: 3 solid #f5d000;
+    transition: .3;
+}
+
+.conquista:hover {
+    background: #1d3028;
+    transform: (-5);
+}
+
+.conquista h3 {
+    color: #f5d000;
+    font-size: 35;
+    margin-bottom: 15;
+}
+
+.conquista p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* VÍDEO */
+
+.video {
+    max-width: 850;
+    margin: auto;
+    aspect-ratio: 16 / 9;
+    border: 3 solid #f5d000;
+    border-radius: 12;
+    overflow: hidden;
+}
+
+.video iframe {
+    width: 100;
+    height: 100;
+    border: none;
+}
+
+.aviso {
+    text-align: center;
+    color: #888;
+    margin-top: 15;
+    font-size: 12;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #030608;
+    text-align: center;
+    padding: 45 20;
+    border-top: 2 solid #f5d000;
+}
+
+footer h2 {
+    font-size: 32;
+    margin-bottom: 15;
+}
+
+footer p {
+    color: #999;
+    margin-top: 10;
+    font-size: 13;
+}
+
+/* CELULAR */
+
+ (max-width: 768) {
+
+    header {
+        padding: 15 4;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15;
+    }
+
+    .menu {
+        gap: 12;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 98;
+        padding: 150 7 60;
+    }
+
+    .historia {
+        grid-template-columns: 1;
+    }
+
+    .cards {
+        grid-template-columns: 1;
+    }
+
+    .conquistas {
+        grid-template-columns: 1;
+    }
+
+    .secao {
+        padding: 80 6;
+    }
+
+    .secao h2 {
+        font-size: 29;
+    }
 }
