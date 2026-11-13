@@ -1,3 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a história, os títulos, as chuteiras e os melhores lances de Neymar Jr.">
+  <title>NEYMAR JR. | The Magic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--yellow:#f5d000;--black:#080808;--panel:#141414;--muted:#aaa}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:#fff;font-family:Montserrat,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{position:fixed;z-index:10;inset:0 0 auto;background:#080808eF;border-bottom:1px solid #ffffff18;backdrop-filter:blur(12px)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font:900 29px 'Barlow Condensed',sans-serif;letter-spacing:1px}.logo span{color:var(--yellow)}
+    .links{display:flex;gap:25px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+    .links a:hover{color:var(--yellow)}
+    .menu{display:none;background:none;color:white;border:0;font-size:27px}
+    .hero{min-height:760px;padding:150px 0 90px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 72% 42%,#5c4d00 0%,#171400 25%,#080808 63%)}
+    .hero:after{content:"10";position:absolute;right:4%;bottom:-150px;font:900 520px 'Barlow Condensed';color:#ffffff08;line-height:1}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;position:relative;z-index:1}
+    .eyebrow{color:var(--yellow);font-size:12px;font-weight:800;letter-spacing:4px;text-transform:uppercase}
+    h1{font:900 clamp(76px,12vw,150px)/.82 'Barlow Condensed',sans-serif;letter-spacing:-3px;margin:20px 0}
+    h1 span{color:var(--yellow);display:block}
+    .hero p{max-width:490px;color:#c6c6c6;font-size:15px;margin:25px 0 30px}
+    .btn{display:inline-block;background:var(--yellow);color:#080808;padding:14px 24px;font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase;transition:.2s}
+    .btn:hover{transform:translateY(-3px);background:#ffe44d}
+    .hero-photo{height:490px;border-radius:8px;position:relative;overflow:hidden;background:linear-gradient(145deg,#292300,#090909 70%);border:1px solid #f5d00055}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;opacity:.76;mix-blend-mode:screen}
+    .photo-label{position:absolute;bottom:20px;left:20px;background:var(--yellow);color:#000;padding:8px 12px;font:800 18px 'Barlow Condensed';letter-spacing:1px}
+    section{padding:100px 0}
+    .section-tag{color:var(--yellow);font-size:11px;letter-spacing:4px;font-weight:800;text-transform:uppercase}
+    h2{font:800 clamp(42px,7vw,72px)/.95 'Barlow Condensed';text-transform:uppercase;margin:12px 0 35px}
+    h2 span{color:var(--yellow)}
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .story-image{height:390px;background:linear-gradient(140deg,#4c4100,#171717);overflow:hidden;border-radius:6px}
+    .story-image img{width:100%;height:100%;object-fit:cover;opacity:.8}
+    .story-copy p{color:#bcbcbc;margin:0 0 17px;font-size:14px}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:45px}
+    .time-card{padding:22px 18px;background:var(--panel);border-top:3px solid var(--yellow)}
+    .time-card strong{font:800 34px 'Barlow Condensed';color:var(--yellow)}
+    .time-card p{font-size:12px;color:#aaa;margin-top:7px}
+    .dark-section{background:#101010}
+    .trophies{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .trophy{background:#191919;padding:25px;border:1px solid #ffffff12;min-height:180px;transition:.2s}
+    .trophy:hover{border-color:var(--yellow);transform:translateY(-4px)}
+    .trophy .icon{font-size:28px}.trophy h3{font:700 25px 'Barlow Condensed';margin:12px 0 5px;text-transform:uppercase}
+    .trophy p{color:#aaa;font-size:12px}
+    .boots{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .boot{background:#151515;border:1px solid #ffffff12;overflow:hidden}
+    .boot img{width:100%;height:190px;object-fit:cover;display:block;filter:saturate(.8)}
+    .boot-info{padding:17px}.boot-info h3{font:700 23px 'Barlow Condensed';color:var(--yellow);text-transform:uppercase}
+    .boot-info p{font-size:11px;color:#aaa;margin-top:6px}
+    .video-box{background:#151515;padding:14px;border:1px solid #f5d00055}
+    .video-frame{position:relative;width:100%;aspect-ratio:16/9;background:#000}
+    .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .video-note{font-size:12px;color:#aaa;padding:12px 4px 2px}
+    .cta{padding:70px 0;text-align:center;background:var(--yellow);color:#080808}
+    .cta h2{margin:0 0 12px}.cta p{font-size:13px}
+    footer{padding:28px 0;color:#777;font-size:11px;text-align:center}
+    footer a{color:var(--yellow)}
+    @media(max-width:800px){
+      .links{display:none;position:absolute;top:72px;left:0;right:0;background:#080808;padding:22px;flex-direction:column;gap:18px}
+      .links.open{display:flex}.menu{display:block}
+      .hero{min-height:auto;padding:130px 0 65px}.hero-grid,.story-grid{grid-template-columns:1fr}
+      .hero-photo{height:350px}.hero:after{font-size:300px;bottom:-75px}
+      section{padding:70px 0}.timeline{grid-template-columns:repeat(2,1fr)}
+      .trophies{grid-template-columns:repeat(2,1fr)}.boots{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:480px){.timeline,.trophies{grid-template-columns:1fr 1fr}.boots{grid-template-columns:1fr 1fr}.boot img{height:135px}.hero-photo{height:290px}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="logo" href="#inicio">NJR<span>.</span></a>
+    <button class="menu" aria-label="Abrir menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+    <div class="links">
+      <a href="#historia">História</a><a href="#titulos">Títulos</a><a href="#chuteiras">Chuteiras</a><a href="#skills">Skills</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">A magia do futebol brasileiro</div>
+        <h1>NEYMAR<span>JR.</span></h1>
+        <p>Talento, criatividade e ousadia. Conheça a trajetória de um dos jogadores mais habilidosos e marcantes do futebol brasileiro.</p>
+        <a class="btn" href="#historia">Explorar carreira ↘</a>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1000&q=85" alt="Campo de futebol iluminado">
+        <div class="photo-label">THE MAGIC #10</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="historia">
+    <div class="wrap">
+      <div class="story-grid">
+        <div class="story-image"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1000&q=85" alt="Jogador conduzindo a bola em campo"></div>
+        <div class="story-copy">
+          <div class="section-tag">01 / A trajetória</div>
+          <h2>De promessa a <span>craque mundial</span></h2>
+          <p>Neymar da Silva Santos Júnior nasceu em 5 de fevereiro de 1992, em Mogi das Cruzes, São Paulo. Desde criança demonstrou talento com a bola e chegou às categorias de base do Santos ainda muito jovem.</p>
+          <p>Estreou como profissional em 2009 e ganhou destaque no Santos com dribles, gols e grandes atuações. Em 2013, foi para o Barcelona, onde formou um ataque histórico com Lionel Messi e Luis Suárez.</p>
+          <p>Em 2017, transferiu-se para o Paris Saint-Germain. Depois passou pelo Al-Hilal e voltou ao Santos em 2025, reencontrando o clube onde começou a brilhar.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="time-card"><strong>2009</strong><p>Estreia profissional pelo Santos.</p></div>
+        <div class="time-card"><strong>2013</strong><p>Transferência para o Barcelona.</p></div>
+        <div class="time-card"><strong>2017</strong><p>Chegada ao Paris Saint-Germain.</p></div>
+        <div class="time-card"><strong>2025</strong><p>Retorno ao Santos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-section" id="titulos">
+    <div class="wrap">
+      <div class="section-tag">02 / Conquistas</div>
+      <h2>Uma carreira <span>de títulos</span></h2>
+      <div class="trophies">
+        <article class="trophy"><div class="icon">🏆</div><h3>Libertadores</h3><p>Santos — 2011</p></article>
+        <article class="trophy"><div class="icon">🥇</div><h3>Champions League</h3><p>Barcelona — 2014/15</p></article>
+        <article class="trophy"><div class="icon">🌍</div><h3>Mundial de Clubes</h3><p>Barcelona — 2015</p></article>
+        <article class="trophy"><div class="icon">🇧🇷</div><h3>Ouro Olímpico</h3><p>Brasil — Rio 2016</p></article>
+        <article class="trophy"><div class="icon">⭐</div><h3>Copa das Confederações</h3><p>Brasil — 2013</p></article>
+        <article class="trophy"><div class="icon">🏅</div><h3>Campeonatos nacionais</h3><p>Conquistas por Santos, Barcelona e PSG.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="chuteiras">
+    <div class="wrap">
+      <div class="section-tag">03 / Dentro de campo</div>
+      <h2>Chuteiras <span>marcantes</span></h2>
+      <div class="boots">
+        <article class="boot">
+          <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80" alt="Futebol em campo">
+          <div class="boot-info"><h3>Nike Hypervenom</h3><p>Modelo usado por Neymar na fase do Barcelona e da Seleção.</p></div>
+        </article>
+        <article class="boot">
+          <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=700&q=80" alt="Campo de futebol">
+          <div class="boot-info"><h3>PUMA Future Z</h3><p>Uma das linhas associadas ao estilo criativo do jogador.</p></div>
+        </article>
+        <article class="boot">
+          <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80" alt="Bola no gramado">
+          <div class="boot-info"><h3>PUMA KING</h3><p>Família clássica da PUMA que Neymar passou a representar em 2020.</p></div>
+        </article>
+        <article class="boot">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Tênis esportivo">
+          <div class="boot-info"><h3>NJR78 FUTURE</h3><p>Edição especial criada para celebrar momentos da trajetória de Neymar.</p></div>
+        </article>
+      </div>
+      <p style="font-size:11px;color:#777;margin-top:15px">Imagens ilustrativas; os modelos e linhas citados são referências históricas, não necessariamente as chuteiras atuais do atleta.</p>
+    </div>
+  </section>
+
+  <section class="dark-section" id="skills">
+    <div class="wrap">
+      <div class="section-tag">04 / Show de habilidade</div>
+      <h2>Dribles, gols e <span>skills</span></h2>
+      <div class="video-box">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/6JX4jWuJCzM" title="The best of Neymar - skills, dribbles and goals by LaLiga" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="video-note">Vídeo de melhores momentos, dribles e gols de Neymar no Barcelona — canal oficial da LALIGA no YouTube.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>OUSADIA. ALEGRIA. FUTEBOL.</h2>
+      <p>O futebol também é criatividade — e Neymar fez disso sua marca.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">Site de fã, sem vínculo oficial com Neymar Jr. · Conteúdo histórico: <a href="https://www.neymarjr.com/pt/futebol/campeao-os-titulos-de-neymar-jr" target="_blank" rel="noopener">Neymar Jr.</a> · <a href="https://www.cob.org.br/time-brasil/medalhistas-olimpicos/neymar-da-silva-santos-junior" target="_blank" rel="noopener">Comitê Olímpico do Brasil</a> · <a href="https://mediahub.puma.com/articles/puma-and-neymar-jr-gift-njr78-future-boots-to-78-people-who-have-helped-him-to-break-brazils-goalscoring-record" target="_blank" rel="noopener">PUMA</a></div>
+</footer>
+</body>
+</html>
 
 
 </body>
